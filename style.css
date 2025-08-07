@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header & Navigation */
+header {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #00a2c6;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+/* Flexbox Layout */
+main {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 1rem;
+}
+
+#content {
+  flex: 3;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+aside {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+aside img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Article & Images */
+article img,
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile & Figure */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #00a2c6;
+}
+
+.profile img {
+  width: 200px;
+}
+
+.profile header {
+  text-align: center;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Card & Jumbotron */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #00c8eb;
+  text-align: center;
+  color: white;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #00a2c6;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .card {
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .tauhid-section h2 {
+    font-size: 22px;
+  }
+
+  .tauhid-section p {
+    font-size: 16px;
+  }
+
+  .caption {
+    font-size: 18px;
+  }
+
+  .subsection h3 {
+    font-size: 20px;
+  }
+
+  .subsection p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Konten Tematik */
+.tauhid-section {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.tauhid-section h2 {
+  font-size: 28px;
+  color: #00a2c6;
+  margin-bottom: 20px;
+}
+
+.tauhid-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.caption {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 12px;
+  color: #007b83;
+}
+
+.subsection {
+  margin-bottom: 40px;
+}
+
+.subsection h3 {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.subsection p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* Referensi */
+.referensi {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 30px;
+  font-size: 16px;
+  color: #007b83;
+}
+
+.referensi h3 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.referensi ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.referensi a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.referensi a:hover {
+  text-decoration: underline;
+}
+
+aside {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-left: 4px solid #007BFF;
+  margin-top: 2rem;
+}
+
+aside h3 {
+  margin-top: 0;
+  color: #007BFF;
+}
+
+aside a {
+  color: #333;
+  text-decoration: none;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
+#slider {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.fakta-singkat li {
+  position: relative;
+  padding-left: 1.2em; /* Jarak antara titik dan teks */
+}
+
+.fakta-singkat li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.fakta-singkat {
+  list-style-type: none; /* Menghapus titik default */
+  padding-left: 1.5em;   /* Tambahkan jarak manual */
+}
+
+ul.fakta-singkat {
+  padding-left: 1.5em;
+}
+
+.fakta-singkat li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #333; /* Bisa diganti warna sesuai tema */
+  font-size: 1.2em;
+}
+
+
